@@ -2,13 +2,14 @@
     /* font-family: 'Kumbh Sans', sans-serif; */
     font-family: 'Montserrat', sans-serif;
     /* font-family: 'Proza Libre', sans-serif; */
-    /* box-sizing: border-box; */
     margin:0;
     padding: 0; 
     
 }
 body{
     background-color: #D6EAF8;
+    overflow: auto;
+    
 }
  .navbar{
     list-style-type: none;
@@ -34,9 +35,6 @@ body{
     width: auto;
   }
   
-   
-
-
  .navbar a  {
     display: block;
     color: white;
@@ -48,14 +46,8 @@ body{
   .navbar a:hover {
     background-color: #0079FF;
     color :black;
+    border-radius: 6px;
   }
-
-  
-  /* .active {
-    background-color: #FF0060;
-    padding: 30px ;
- 
-  } */
 
   /* color changer */
 
@@ -84,7 +76,7 @@ body{
     background-color: #0F68DB;
     }
 
-    /* dropdown colorchanger */
+    /* dropdown color changer */
     .dropdown {
         float: left;
         overflow: hidden;
@@ -97,16 +89,15 @@ body{
         outline: none;
         color: white;
         padding: 14px 16px;
-        /* background-color: inherit; */
         background-color: #FF0060 ;
         font-family: inherit;
-        /* margin: 0; */
         border-radius: 5px;
         margin-left: 20px;
       }
       
       .dropdown:hover .dropbtn, .dropbtn:focus {
-        background-color: red;
+        background-color: #F6FA70;
+        color: #333;
       }
       
       .dropdown-content {
@@ -135,4 +126,127 @@ body{
       .show {
         display: block;
       }
+ /* Services Quotation */
+ .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+ .quotation {
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: #00DFA2 ;
+    font-family: inherit;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-align: center;
+
+ }
+ .quotation:hover {
+    background-color: #f0397f ;
+ }
  
+ /* popup */
+ /* The Modal (background) */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /* Fallback color */
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 430px;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+/* The Close Button */
+.close-popup {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  /* font-family: 'Proza Libre', sans-serif; */
+  color: #0079FF;
+  font-family: 'Kumbh Sans', sans-serif;
+
+}
+h2 {
+  font-size: medium;
+}
+
+hr {
+  border: none;
+  width:97%;
+  margin: auto;
+  height: 2px;
+  background-color: #4CAF50;
+  border-radius: 10px;
+}
+/* quotation form attributes */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=checkbox] {
+  width: 100%;
+  padding: 14px 20px ;
+  margin: 8px 0;
+  border: none;
+  display: flex;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#service {
+  background-color: #00DFA2;
+}

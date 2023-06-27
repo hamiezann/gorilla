@@ -31,11 +31,71 @@
         </div>
     </div>
       <br>
-      <div> ni area servis</div>
-      <br><br><br>
+      <div>         ni area servis</div>
+      <br><br><br><br><br><br><br><br><br><hr><br><br>
+<div class="center">
+
+  <!-- This is quotation space -->
+  <button class="quotation" id="myBtn" onclick="popupSection()">Create A Quotation</button>
+
+  <div id="quotation-popup" class="popup">
+  
+    <!-- Modal content -->
+    <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      
+      <span><h1> PLEASE ENTER YOUR QUOTE REQUESTS:</h1> </span>
+      <br><br><hr><br>
       <div>
-        <button class="quotation">Make Quotation</button>
+        <h2>SELECT THE SERVICE</h2>
+        <br>
+        <label for="service">All About Tyre</label> 
+        <input type="checkbox" id="service" onclick="service_select()">
+        <label for="service">Aircond Services</label> 
+        <input type="checkbox" id="service" onclick="service_select()">
+        <label for="service">Engine Oil Replacement</label> 
+        <input type="checkbox" id="service" onclick="service_select()">
+        <label for="service">15 Checkpoints Inspection</label> 
+        <input type="checkbox" id="service" onclick="service_select()">
+        <label for="service">Engine Suspension Inspection</label> 
+        <input type="checkbox" id="service" onclick="service_select()">
+        <label for="service">Car Battery Replacement</label> 
+        <input type="checkbox" id="service" onclick="service_select()">
+        
+        <br>
+        <p id="text" style="display:none">Checkbox is CHECKED!</p>
+        <br>
       </div>
+      <h2>PERSONAL INFORMATIONS</h2>
+      <br>
+      <form action="/action_page.php">
+        <label for="fname">Full Name</label>
+        <input type="text" id="fname" name="fullname" placeholder="Your name..">
+    
+        <label for="email">E-mail</label>
+        <input type="text" id="email" name="em" placeholder="Your e-mail..">
+        
+        <label for="noPhone">Phone number</label>
+        <input type="text" id="noPhone" name="no_phone" placeholder="Your no phone ..">
+        <label for="contactWay">I wish to be contacted by:</label>
+        <select id="contactWay" name="contact">
+          <option value="phone">Phone</option>
+          <option value="email">E-mail</option>
+          <option value="bothWay">Phone or E-mail</option>
+        </select>
+      
+        <input type="submit" value="Submit">
+      </form>
+      
+    </div>
+  
+  </div>
+ 
+  </div>
+</div>
+  
+  
+
      
 </body>
 </html>
