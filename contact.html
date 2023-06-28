@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="gorilla.css">
+    <meta charset="UTF-8">
+    <script src="gorilla.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GORILLA</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&amp;family=Montserrat&amp;family=Proza+Libre&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    /* Add your custom CSS styles here */
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-size: 14px;
+    }
+
+    .container{
+      width: 80%;
+      margin: 50px auto;
+    }
+
+    .contact-box{
+        display: flex;
+    }
+
+    .contact-left{
+        flex-basis: 60%;
+        padding: 40px 60px;
+    }
+
+
+    .contact-right{
+        flex-basis: 40%;
+        padding: 40px;
+    }
+
+    h1{
+        margin-bottom: 40px ;
+    }
+
+    .container p{
+        margin-bottom: 40px;
+    }
+
+    .input-row{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .input-row.input-group{
+        flex-basis: 40%;
+    }
+
+    input{
+        width: 100% ; 
+        border: 1px solid #ccc;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+
+    }
+    label{
+        margin-bottom: 6px;
+        display: block;
+    }
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 0;
+      width: 200px;
+
+    }
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+
+    .contact-left h3{
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .contact-right h3{
+        font-weight: 600;
+        margin-bottom: 30px;
+
+    }
+
+    tr td:first-child{
+        padding-right: 20px;
+    }
+
+    tr td{
+        padding-top: 20px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+    <!-- navbar -->
+    
+    <div class="navbar">
+        <div class="logo"><img src="gorilla1.svg"></div>
+       
+        <a href="aboutUs.html">About Us</a>
+        <a href="Services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Change Color <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="#"><span id="1" onclick="color(this)" class="color clr1"></span>Color 1</a>
+            <a href="#"><span id="2" onclick="color(this)" class="color clr2"></span>Color 2</a>
+            <a href="#"><span onclick="color(this)" class="color clr3"></span>Color 3</a>
+            <a href="#"><span onclick="color(this)" class="color clr4"></span>Color 4</a>
+            
+          </div>
+        </div>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992.1418495867622!2d101.6776030920568!3d3.018250191245031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb53c1e09dd83%3A0x5f3a78527864fd4b!2sSun%20Integrated%20Builders%20Sdn.%20Bhd.!5e0!3m2!1sen!2smy!4v1687871111921!5m2!1sen!2smy" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
+        <div class="contact-box">  
+
+            <div class="contact-left"> 
+               
+                <h2>Contact Us</h2>
+                <p>Complete and submit the form below and we will be in touch with you soon.</p>
+                </br>
+                </br>
+        
+                <form>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="">
+                        </div> 
+                        <div class="input-group">
+                            <label>Phone</label>
+                            <input type="text" placeholder="">
+                        </div> 
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="text" placeholder="">
+                        </div> 
+                        <div class="input-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder="">
+                            
+                        </div> 
+                    </div>
+
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="" ></textarea>
+                    <input type="submit" value="Submit" >
+                </form>    
+            </div>
+            <div class="contact-right">
+                <h3>Reach Us</h3>
+
+                <table>   
+                    <tr>
+                        <td>Email</td>
+                        <td>gori11aworksh0p@gmail.com</td>
+                    </tr> 
+                    <tr>
+                        <td>Phone</td>
+                        <td>+6063877691</td>
+                    </tr> 
+                    <tr>
+                        <td>Address</td>
+                        <td>No. 13, Jalan Puj 3/9, Taman Puncak Jalil, Selangor, 43300 Seri Kembangan, Selangor</td>
+                    </tr> 
+                </table>
+                 <div style="margin: 50px 0;">
+                     <a href="#"><i class="fa fa-facebook"></i></a> 
+                     <a href="#"><i class="fa fa-twitter"></i></a>  
+                     <a href="#"><i class="fa fa-instagram"></i></a>  
+     
+                 </div>
+            </div>  
+        </div>           
+
+  
+
+</body>
+</html>
