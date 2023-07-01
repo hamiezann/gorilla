@@ -54,13 +54,65 @@ span.onclick = function() {
 
 }
 
-// checkbox service
-function service_select() {
-  var checkBox = document.getElementById("service");
-  var text = document.getElementById("text");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-     text.style.display = "none";
+
+function service_select(event){
+  event.preventDefault();
+    const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'));
+    const services = checkboxes.map(checkbox => ({
+      value: parseInt(checkbox.value),
+      label: checkbox.previousElementSibling.textContent
+    }));
+      
+    const fullname = document.getElementById('fname').value;
+    const email = document.getElementById('email').value;
+    const phoneNumber = document.getElementById('noPhone').value;
+    const contactMethod = document.getElementById('contactWay').value;
+
+
+    const sum = services.reduce((total, service) => total + service.value, 0);
+
+
+    const imageUrl = "testbaru.svg";
+
+    
+    const checkedItems = Array.from(checkboxes).map(checkbox => {
+      return {
+        label: document.querySelector(`label[for="${checkbox.id}"]`).textContent,
+        value: checkbox.value
+      };
+    });
+
+    // Display the checked checkboxes
+    const content = `<h2>Checked Services:</h2><hr><ul>${checkedItems.map(item => `<li>${item.label} - <p>RM${item.value}</p></li>`).join('')}</ul>`;
+    const newTab = window.open();
+  newTab.document.write(`
+  
+  <img src="${imageUrl}" alt="Predefined Image" width="300" height="200">
+  <h1>Service Quotation</h1>
+<p> ~ Please be mindful the price displayed here is just a cost overhead for the service and they may be changes to the price based on the real condition of customer cars and suggestion of our experts. ~</p>
+                          <hr>
+                          <p>Service Charge: RM${sum}</p>
+                          <br>
+                          <hr>
+                          <p>${content}</p>
+                          <br>
+                          <hr>
+                  
+                          <h2>Customer Details:</h2>
+                          <hr>
+                          <p>Name:${fullname}</p>
+                      
+                          <p>E-mail:${email}</p>
+                          
+                          <p>Phone number:${phoneNumber}</p>
+                          
+                          <p>Contact Method:${contactMethod}</p>
+                          <br><br><br><br>
+                          `);
+
+                          
   }
-}
+
+
+
+

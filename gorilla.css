@@ -184,20 +184,20 @@ body{
 .close-popup {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 45px;
   font-weight: bold;
 }
 
 .close-popup:hover,
 .close-popup:focus {
-  color: #000;
+  color: red;
   text-decoration: none;
   cursor: pointer;
 }
 
 h1 {
   /* font-family: 'Proza Libre', sans-serif; */
-  color: #0079FF;
+  color: #333;
   font-family: 'Kumbh Sans', sans-serif;
 
 }
@@ -226,7 +226,7 @@ input[type=text], select {
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #00DFA2;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -236,7 +236,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #f0397f ;
 }
 input[type=checkbox] {
   width: 100%;
@@ -250,3 +250,4 @@ input[type=checkbox] {
 #service {
   background-color: #00DFA2;
 }
+

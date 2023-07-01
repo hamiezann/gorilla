@@ -14,10 +14,10 @@
     <!-- navbar -->
     
     <div class="navbar">
-        <div class="logo"><img src="gorilla1.svg"></div>
+        <div class="logo"><img src="testbaru.svg"></div>
        
         <a   href="aboutUs.html">About Us</as>
-        <a  href="Services.html">Services</a>
+        <a   href="Services.html">Services</a>
         <a   href="#contact">Contact Us</a>
         <div class="dropdown">
         <button  class="dropbtn" onclick="myFunction()">Change Color <i class="fa fa-caret-down"></i></button>
@@ -44,31 +44,32 @@
     <div class="popup-content">
       <span class="close-popup">&times;</span>
       
-      <span><h1> PLEASE ENTER YOUR QUOTE REQUESTS:</h1> </span>
+      <h1> PLEASE ENTER YOUR QUOTE REQUESTS:</h1> 
       <br><br><hr><br>
       <div>
         <h2>SELECT THE SERVICE</h2>
         <br>
-        <label for="service">All About Tyre</label> 
-        <input type="checkbox" id="service" onclick="service_select()">
-        <label for="service">Aircond Services</label> 
-        <input type="checkbox" id="service" onclick="service_select()">
-        <label for="service">Engine Oil Replacement</label> 
-        <input type="checkbox" id="service" onclick="service_select()">
-        <label for="service">15 Checkpoints Inspection</label> 
-        <input type="checkbox" id="service" onclick="service_select()">
-        <label for="service">Engine Suspension Inspection</label> 
-        <input type="checkbox" id="service" onclick="service_select()">
-        <label for="service">Car Battery Replacement</label> 
-        <input type="checkbox" id="service" onclick="service_select()">
+      <form id="quotationForm" onsubmit="service_select(event)">
+        <label for="service1">All About Tyre</label>
+        <input type="checkbox" name="service" id="service1" value="200">
+        <label for="service2">Aircond Services</label> 
+        <input type="checkbox" name="service" id="service2" value="150">
+        <label for="service3">Engine Oil Replacement</label> 
+        <input type="checkbox"  name="service" id="service3" value="120">
+        <label for="service4">15 Checkpoints Inspection</label> 
+        <input type="checkbox"  name="service" id="service4" value="1000">
+        <label for="service5">Engine Suspension Inspection</label> 
+        <input type="checkbox"  name="service" id="service5" value="950">
+        <label for="service6">Car Battery Replacement</label> 
+        <input type="checkbox"  name="service" id="service6"value="200">
         
         <br>
-        <p id="text" style="display:none">Checkbox is CHECKED!</p>
+        
         <br>
-      </div>
+      
       <h2>PERSONAL INFORMATIONS</h2>
       <br>
-      <form action="/action_page.php">
+     
         <label for="fname">Full Name</label>
         <input type="text" id="fname" name="fullname" placeholder="Your name..">
     
@@ -79,20 +80,22 @@
         <input type="text" id="noPhone" name="no_phone" placeholder="Your no phone ..">
         <label for="contactWay">I wish to be contacted by:</label>
         <select id="contactWay" name="contact">
-          <option value="phone">Phone</option>
-          <option value="email">E-mail</option>
-          <option value="bothWay">Phone or E-mail</option>
+          <option value="Phone">Phone</option>
+          <option value="E-mail">E-mail</option>
+          <option value="Phone and e-mail">Phone or E-mail</option>
         </select>
       
         <input type="submit" value="Submit">
       </form>
-      
+      </div>
+
     </div>
   
   </div>
  
-  </div>
-</div>
+ 
+
+  
   
   
 
