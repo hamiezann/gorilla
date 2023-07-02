@@ -89,13 +89,8 @@ function service_select(event){
   
   <img src="${imageUrl}" alt="Predefined Image" width="300" height="200">
   <h1>Service Quotation</h1>
-<p> ~ Please be mindful the price displayed here is just a cost overhead for the service and they may be changes to the price based on the real condition of customer cars and suggestion of our experts. ~</p>
+<p> ~ Please be mindful the price displayed here is just a cost overhead for the service and there may be changes to the price based on the real condition of customer cars and suggestion of our experts. ~</p>
                           <hr>
-                          <p>Service Charge: RM${sum}</p>
-                          <br>
-                          <hr>
-                          <p>${content}</p>
-                          <br>
                           <hr>
                   
                           <h2>Customer Details:</h2>
@@ -107,6 +102,12 @@ function service_select(event){
                           <p>Phone number:${phoneNumber}</p>
                           
                           <p>Contact Method:${contactMethod}</p>
+                          <p>Service Charge: RM${sum}</p>
+                          <br>
+                          <hr>
+                          <p>${content}</p>
+                          <br>
+                          
                           <br><br><br><br>
                           `);
 

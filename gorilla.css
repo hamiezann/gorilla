@@ -222,6 +222,8 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color:#D6EAF8;
+
 }
 
 input[type=submit] {
@@ -243,11 +245,23 @@ input[type=checkbox] {
   padding: 14px 20px ;
   margin: 8px 0;
   border: none;
-  display: flex;
-  border-radius: 4px;
+  /* display: flex; */
+  border-radius: 5px;
   cursor: pointer;
+  background-color: #00DFA2;
+  height: 30px;
+ 
 }
 #service {
   background-color: #00DFA2;
 }
 
+label{
+  background-color: #D6EAF8;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  
+  align-items: center;
+}
