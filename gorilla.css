@@ -194,7 +194,7 @@ body{
   .card  img {
       display: block;
       display: flex;
-      border-radius: 50%;
+      border-radius: 20%;
       align-items: center;
       justify-content: center;
       height: 80px;
