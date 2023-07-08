@@ -127,34 +127,31 @@ body{
         display: block;
       }
 
+
+
   /* Services Start*/
 
-  h2 {
-    font-size: 100px;
+  .service_h2{
+    font-size: 30px;
     font-family: 'Kumbh Sans', sans-serif;
     text-align: center;
+    justify-content: center;
     padding: 5px;
-    margin-bottom: 50px;
-    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
   }
   
-  h2:before, h2:after {
+  /* h2:before, h2:after {
     width: 20%;
     content: "";
     flex: 1 1;
     border-bottom: 2px solid #000;
     margin: auto;
-  }
-    
-  /* img {
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
   } */
 
-  .service_head > hr {
+  .service_head {
     height: 2px;
     border-width:0; 
     color:gray; 
@@ -172,13 +169,8 @@ body{
     margin: 0 auto;
     max-width: 1000px;
     display: grid;
-    /* justify-items: center; */
     grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-    /* grid-auto-rows: 200px; */
     gap: 5em;
-    /* width: 80%;
-    margin-bottom: 100px;
-    margin-left: 9%; */
   }
 
   .card {
@@ -189,12 +181,13 @@ body{
     padding: 18px;
     justify-items: center;
     box-shadow: 0px 0px 5px black;
-    /* margin: 80px auto 40px auto; */
   }
 
   .card  img {
       display: block;
+      display: flex;
       border-radius: 50%;
+      align-items: center;
       justify-content: center;
       height: 80px;
       width: 80px;
@@ -202,7 +195,6 @@ body{
 
   .service_box > div:hover {
     transition: 0.25s ease-in;
-    /* background-color: #f9f9f9; */
     background-color: #fafafa;
   }
 
@@ -222,8 +214,6 @@ body{
     border:#a1a1a1;
     /* float: center; */
     transition: margin 0.5s ease-out;
-    /* transition: margin 0.5s ease-out;
-    transition: margin 0.5s ease-out; */
   }
   
   img.hoverImages:hover {
@@ -233,7 +223,106 @@ body{
 
 /* Hover floating image -end- */
 
+
+/* .card_button > button {
+  background-color: #00DFA2;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  color: #fff;
+  padding: 5px 13px;
+}
+
+.card_button > button:hover {
+  background-color: #f0397f ;
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: 0.3 ease;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.modal h1{
+  margin: 0;
+}
+
+.modal p{
+  opacity: 0.7;
+} */
+
+
+ /* Button Styles */
+ .popup-button1 {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-button1:hover{
+  background-color: #00DFA2;
+}
+
+/* Popup Styles */
+.popup1 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content1 {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #888;
+  cursor: pointer;
+}
+
 /* Service END */
+
+
 
  /* Services Quotation */
  .center {
