@@ -117,17 +117,6 @@ function service_select(event){
   }
 
   // Services Button Popup
-  // const open = document.getElementById('open');
-  // const modal_container = document.getElementById('modal_container');
-  // const close = document.getElementById('close');
-  
-  // open.addEventListener('click', () => {
-  //   modal_container.classList.add('show');
-  // });
-  
-  // close.addEventListener('click', () => {
-  //   modal_container.classList.remove('show');
-  // });
 
   function openPopup() {
     document.getElementById('popup1').style.display = 'flex';
@@ -137,5 +126,66 @@ function service_select(event){
     document.getElementById('popup1').style.display = 'none';
   }
 
+
+  function openPopup() {
+    document.getElementById('popup2').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup2').style.display = 'none';
+  }
+
+  function openPopup() {
+    document.getElementById('popup3').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup3').style.display = 'none';
+  }
+
+  function openPopup() {
+    document.getElementById('popup4').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup4').style.display = 'none';
+  }
+
+  function openPopup() {
+    document.getElementById('popup5').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup5').style.display = 'none';
+  }
+
+  function openPopup() {
+    document.getElementById('popup6').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup6').style.display = 'none';
+  }
+
+
+
+
+  // Get the modal
+  var modal = document.getElementById("popup1");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function closePopup() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == popup1) {
+      modal.style.display = "none";
+    }
+  }
 
 

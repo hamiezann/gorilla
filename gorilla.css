@@ -182,13 +182,13 @@ body{
   }
 
   .card {
-    
+    border-radius: 5%;
     width: 100%;
     height: 100%;
     background-color: #C5DFF8;
     padding: 18px;
     justify-items: center;
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 3px black;
   }
 
   .card  img {
@@ -226,77 +226,29 @@ body{
   
   img.hoverImages:hover {
     cursor:pointer;
-      margin-top: 5px;
+    margin-top: 5px;
   }
 
 /* Hover floating image -end- */
 
 
-/* .card_button > button {
-  background-color: #00DFA2;
-  border: 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  color: #fff;
-  padding: 5px 13px;
-}
-
-.card_button > button:hover {
-  background-color: #f0397f ;
-}
-
-.modal-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  transition: 0.3 ease;
-}
-
-.modal-container.show {
-  pointer-events: auto;
-  opacity: 1;
-}
-
-.modal {
-  background-color: #FFF;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  padding: 30px 50px;
-  width: 600px;
-  max-width: 100%;
-  text-align: center;
-}
-
-.modal h1{
-  margin: 0;
-}
-
-.modal p{
-  opacity: 0.7;
-} */
-
-
  /* Button Styles */
  .popup-button1 {
-  margin-top: 10px;
+  margin: 0px 10px 0px 10px;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  /* position: absolute; */
+  
 }
 
 .popup-button1:hover{
   background-color: #00DFA2;
 }
+
 
 /* Popup Styles */
 .popup1 {
@@ -316,15 +268,41 @@ body{
   background-color: #fff;
   padding: 20px;
   border-radius: 4px;
-  max-width: 400px;
   text-align: center;
+  width: 70%;
+  height: 65%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .close1 {
+  font-size: 45px;
+  font-weight: bold;
+  float: right;
   position: absolute;
   top: 10px;
   right: 10px;
-  color: #888;
+  color: #aaaaaa;
+  cursor: pointer;
+}
+
+.close1:hover,
+.close1:focus {
+  color: red;
+  text-decoration: none;
   cursor: pointer;
 }
 
