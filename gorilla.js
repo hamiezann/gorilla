@@ -1,7 +1,9 @@
 function color(z) {
     var a = getComputedStyle(z);
     var b = a.backgroundColor;
+ 
     document.getElementsByTagName("BODY")[0].style.backgroundColor=b;
+    
     }
 function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
