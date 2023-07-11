@@ -51,9 +51,9 @@ body{
 
   /* color changer */
 
-  .container {
+  /* .container {
     border: 90px solid #333;
-    }
+    } */
     .color {
     display: table-cell;
     width: 150px;
@@ -62,6 +62,7 @@ body{
     cursor: pointer;
     border: 2px solid #FFF;
     border-radius: 5px;
+    
     }
     .clr1 {
     background-color: #FF0060 ;
@@ -448,7 +449,7 @@ input[type=checkbox] {
 }
 
 label{
-  background-color: #D6EAF8;
+  background-color: inherit;
   height: 40px;
   border-radius: 5px;
   cursor: pointer;
