@@ -765,7 +765,7 @@
     <div class="card">
       <img class="hoverImages" src="battery.jpg" alt="#">
       <div class="box_content">
-        <h3>BatteryYYY Services</h3><br>
+        <h3>Battery Services</h3><br>
         <p>Ensure reliable starts and uninterrupted journeys with our professional car battery services. From testing to
           replacement, trust us to keep your vehicle powered up and ready for the road!</p><br>
           <ul>
@@ -933,6 +933,18 @@
         <br><br>
         <hr><br>
         <div>
+
+          <h2>SELECT THE CAR TYPE</h2>
+    <br>
+    <select id="carType" name="carType">
+      <option value="MPV">MPV</option>
+      <option value="Sedan">Sedan</option>
+      <option value="SUV">SUV</option>
+    </select>
+
+
+          
+
           <h2>SELECT THE SERVICE</h2>
           <br>
           <form id="serviceForm" onsubmit="service_select(event)">
@@ -971,6 +983,9 @@
               <option value="Phone and e-mail">Phone or E-mail</option>
             </select>
 
+            <label for="discountCode">Discount Code (if any)</label>
+            <input type="text" id="discountCode" name="discountCode" placeholder="Enter discount code">
+
             <input type="submit" value="Submit" id="summaryButton">
           </form>
         </div>
@@ -1001,6 +1016,34 @@ window.onclick = function(event) {
 
 </script>
 
+<script>function popupSection() {
+  // Get the modal
+  let popup = document.getElementById("quotation-popup");
+
+  // Get the button that opens the modal
+  let btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  let span = document.getElementsByClassName("close-popup")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function () {
+    popup.style.display = "block";
+  };
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    popup.style.display = "none";
+  };
+
+  // When the user clicks outside the modal, close it
+  window.onclick = function (event) {
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  };
+}
+</script>
 
 
 
