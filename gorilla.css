@@ -141,7 +141,8 @@ body{
 
   hr.service_hr {
     width: 5%;
-    margin: 30px auto;
+    margin: 40px auto;
+    margin-top: 5px;
     background-color: #333;  
   }
 
@@ -195,8 +196,8 @@ body{
       border-radius: 20%;
       align-items: center;
       justify-content: center;
-      height: 80px;
-      width: 80px;
+      height: 100px;
+      width: 150px;
     }
 
   .service_box > div:hover {
@@ -254,6 +255,7 @@ body{
 
 
 /* Popup Styles */
+
 .popup1 {
   display: none;
   position: fixed;
@@ -266,15 +268,24 @@ body{
   align-items: center;
   justify-content: center;
 }
-
 .popup-content1 {
-  background-color: #fff;
+  background-color: #fefefe;
+  margin: auto;
   padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-  width: 70%;
-  height: 65%;
+  border: 1px solid #888;
+  width: 60%;
+  height: 470px;
+  border-radius: 8px;
   overflow: auto;
+}
+.popup-content1 img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.popup-content1 p {
+  margin-bottom: 15px;
 }
 
 /* The Close Button */
@@ -310,6 +321,7 @@ body{
   cursor: pointer;
 }
 
+
 /* Service Detail -start */
 :root {
   --contentHeight: 30vh;
@@ -323,16 +335,17 @@ section {
   color: black;
 }
 
+
 summary {
   display: block;
   cursor: pointer;
   padding: 10px;
-  font-family: "Space Mono", monospace;
   font-size: 22px;
   transition: .3s;
   border-bottom: 2px solid;
   user-select: none;
 }
+
 
 details > div {
   display: flex;
@@ -356,7 +369,7 @@ details > div > p {
 }
 
 details[open] > summary {
-   color: silver;
+  color: silver;
 }
 
 @media (min-width: 768px) {
@@ -368,6 +381,7 @@ details[open] > summary {
     animation-fill-mode: forwards;
     margin: 0;
     padding-left: 20px;
+    transition: ease 0.2s;
   }
 
   details[open] > div {
@@ -384,6 +398,7 @@ details[open] > summary {
     animation-duration: 0.3s;
     animation-delay: 0.15s;
     animation-fill-mode: forwards;
+    width: auto;
   }
 }
 
@@ -423,6 +438,66 @@ details[open] > summary {
   }
 }
 
+.view_detail > p {
+  background-color: #000;
+}
+
+details > summary > .service_info {
+  justify-content: center;
+}
+
+
+
+.divide_tab {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.service_info {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+.column img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e5e5e5;
+}
 /* Service Detail -End */
 
 /* Service END */
