@@ -279,6 +279,7 @@ body{
   text-align: center;
   width: 70%;
   height: 65%;
+  overflow: auto;
 }
 
 /* The Close Button */
@@ -484,7 +485,7 @@ details[open] > summary {
   width: 90%;
   height:  450px;
   border-radius: 8px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 /* The Close Button */
