@@ -96,8 +96,7 @@ function openTabWithSummary() {
   const content = `<h2>Checked Services:</h2><hr><ul>${selectedServices.map((service) => `<li>${service}</li>`).join('')}</ul>`;
   const newTab = window.open();
   newTab.document.write(`
-    <h1>Service Summary</h1>
-    <p>Total Cost: RM${totalCost}</p>
+    
 
     <img src="${imageUrl}" alt="Predefined Image" width="300" height="200">
     <h1>Service Quotation</h1>
@@ -110,18 +109,24 @@ function openTabWithSummary() {
     <p>E-mail: ${email}</p>
     <p>Phone number: ${phoneNumber}</p>
     <p>Contact Method: ${contactMethod}</p>
-    <p>Service Charge: RM${sum}</p>
+    <p>Service Charge: RM${totalCost}</p>
     <br>
     <hr>
     <p>${content}</p>
     <br>
     <br><br><br><br>
-    ${content}
+
+    <h1>Service Summary</h1>
+    <p>Total Cost: RM${totalCost}</p>
+   
   `);
-}
+};
  
-  
+const popupButton = document.getElementById("summaryButton");
+  popupButton.addEventListener('click', openNewTab);
 }
+  
+
 
 
 
