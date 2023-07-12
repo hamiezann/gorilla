@@ -6,10 +6,11 @@
     <script src="gorilla.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GORILLA</title>
+    <link rel="icon" type="image/x-icon" href="logobaru.png">
     
      <!-- Image -->
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <!-- Image -->
     
     
@@ -18,25 +19,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- navbar -->
-    
-    <div class="navbar">
-        <div class="logo"><img src="testbaru.svg"></div>
-       
-        <a   href="aboutUs.html">About Us</a>
-        <a   href="Services.html">Services</a>
-        <a   href="contact.html">Contact Us</a>
-        <div class="dropdown">
-        <button  class="dropbtn" onclick="myFunction()">Change Color <i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content" id="myDropdown">
-            <a href="#"><span id='1' onclick="color(this)" class='color clr1'></span>Color 1</a>
-            <a href="#"><span id='2' onclick="color(this)" class='color clr2'></span>Color 2</a>
-            <a href="#"><span onclick="color(this)" class='color clr3'></span>Color 3</a>
-            <a href="#"><span onClick="color(this)" class='color clr4'></span>Color 4</a>
-            
-          </div>
-        </div>
+  <div class="navbar">
+    <div class="logo"><img src="testbaru.svg"></div>
+   
+    <a href="aboutUs.html">About Us</a>
+    <a href="Services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
+    <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Change Color <i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="#"><span id="1" onclick="color(this)" class="color clr1"></span>Color 1</a>
+        <a href="#"><span id="2" onclick="color(this)" class="color clr2"></span>Color 2</a>
+        <a href="#"><span onclick="color(this)" class="color clr3"></span>Color 3</a>
+        <a href="#"><span onclick="color(this)" class="color clr4"></span>Color 4</a>
+        
+      </div>
     </div>
+</div>
+      
+      
+
 
     <div class="jumbotron">
       <div class="container">
@@ -98,8 +100,89 @@
     </div>
   </div>
 
-  <div class="splitview skewed">
+
+  <div class="row2">
+
+    <h1 class="cuba"  >OUR TEAM</h1>
+    
+    <div class="column1">
+      <div class="card2">
+        <h2>Owner</h2>
+        <img src="hamiezan1.png" alt="Jane" style="width:100%">
+        <div class="container2">
+          
+          <p class="title">Hamiezan</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="column1">
+      <div class="card2">
+        <h2>Supervisor</h2>
+        <img src="haziq3.png" alt="Mike" style="width:100%">
+        <div class="container2">
+          
+          <p class="title">Haziq</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="column1">
+      <div class="card2">
+        <h2>Technician</h2>
+        <img src="salehuddin4.png" alt="John" style="width:100%">
+        <div class="container2">
+          
+          <p class="title">Salehuddin</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="column1">
+      <div class="card2">
+        <h2>Advisor</h2>
+        <img src="arief5.png" alt="John" style="width:100%">
+        <div class="container2">
+          
+          <p class="title">Arief</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="column1">
+      <div class="card2">
+        <h2>Manager</h2>
+        <img src="farhan2.png" alt="John" style="width:100%">
+        <div class="container2">
+          
+          <p class="title">Farhan</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- <div class="splitview skewed">
+    
     <div class="panel bottom">
+      
         <div class="content">
             <div class="description">
                 <h1>Workshop Owner</h1>
@@ -111,6 +194,7 @@
     </div>
 
     <div class="panel top">
+      
         <div class="content">
             <div class="description">
                 <h1>Supervisor</h1>
@@ -122,22 +206,24 @@
     </div>
 
     <div class="handle"></div>
-</div>
+</div> -->
+
+
   
-    <script>
+    <!-- <script>
     document.addEventListener('DOMContentLoaded', function() {
       var parent = document.querySelector('.splitview'),
           topPanel = parent.querySelector('.top'),
           handle = parent.querySelector('.handle'),
           skewHack = 0,
-          delta = 0;
+          delta = 0; -->
   
-      // If the parent has .skewed class, set the skewHack var.
-      if (parent.className.indexOf('skewed') != -1) {
+      <!-- // If the parent has .skewed class, set the skewHack var. -->
+      <!-- if (parent.className.indexOf('skewed') != -1) {
           skewHack = 1000;
-      }
+      } -->
   
-      parent.addEventListener('mousemove', function(event) {
+      <!-- parent.addEventListener('mousemove', function(event) {
           // Get the delta between the mouse position and center point.
           delta = (event.clientX - window.innerWidth / 2) * 0.5;
   
@@ -146,8 +232,25 @@
   
           // Adjust the top panel width.
           topPanel.style.width = event.clientX + skewHack + delta + 'px';
-      });
-  });</script>
+      }); -->
+  <!-- });</script> -->
+
+  <script>
+  function toggleNavbar() {
+  var navbarLinks = document.getElementById("navbarLinks");
+  if (navbarLinks.style.display === "block") {
+    navbarLinks.style.display = "none";
+  } else {
+    navbarLinks.style.display = "block";
+  }
+}
+
+
+
+  
+  
+  
+  </script>
     
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
