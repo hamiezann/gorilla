@@ -87,34 +87,36 @@ event.preventDefault();
   // Display the checked checkboxes
   const content = `<h2>Checked Services:</h2><hr><ul>${checkedItems.map(item => `<li>${item.label} - <p>RM${item.value}</p></li>`).join('')}</ul>`;
   const newTab = window.open();
-newTab.document.write(`
+  newTab.document.write(`
+    <h1>Service Summary</h1>
+    <p>Total Cost: RM${totalCost}</p>
 
-<img src="${imageUrl}" alt="Predefined Image" width="300" height="200">
-<h1>Service Quotation</h1>
-<p> ~ Please be mindful the price displayed here is just a cost overhead for the service and there may be changes to the price based on the real condition of customer cars and suggestion of our experts. ~</p>
-                        <hr>
-                        <hr>
-                
-                        <h2>Customer Details:</h2>
-                        <hr>
-                        <p>Name:${fullname}</p>
-                    
-                        <p>E-mail:${email}</p>
-                        
-                        <p>Phone number:${phoneNumber}</p>
-                        
-                        <p>Contact Method:${contactMethod}</p>
-                        <p>Service Charge: RM${sum}</p>
-                        <br>
-                        <hr>
-                        <p>${content}</p>
-                        <br>
-                        
-                        <br><br><br><br>
-                        `);
-
-                        
+    <img src="${imageUrl}" alt="Predefined Image" width="300" height="200">
+    <h1>Service Quotation</h1>
+    <p> ~ Please be mindful the price displayed here is just a cost overhead for the service and there may be changes to the price based on the real condition of customer cars and suggestion of our experts. ~</p>
+    <hr>
+    <hr>
+    <h2>Customer Details:</h2>
+    <hr>
+    <p>Name: ${fullname}</p>
+    <p>E-mail: ${email}</p>
+    <p>Phone number: ${phoneNumber}</p>
+    <p>Contact Method: ${contactMethod}</p>
+    <p>Service Charge: RM${sum}</p>
+    <br>
+    <hr>
+    <p>${content}</p>
+    <br>
+    <br><br><br><br>
+    ${content}
+  `);
 }
+ 
+  
+}
+
+
+
 
 
 

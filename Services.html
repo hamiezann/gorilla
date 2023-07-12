@@ -927,88 +927,42 @@
         <span class="close-popup">&times;</span>
 
 
-       
-
-        <h1> PLEASE ENTER YOUR QUOTE REQUESTS:</h1>
-        <br><br>
-        <hr><br>
-        <div>
-          <h2>SELECT THE SERVICE</h2>
-          <br>
-          <form id="quotationForm" onsubmit="service_select(event)">
-            <label for="service1">All About Tyre</label>
-            <input type="checkbox" name="service" id="service1" value="200">
-            <label for="service2">Aircond Services</label>
-            <input type="checkbox" name="service" id="service2" value="150">
-            <label for="service3">Engine Oil Replacement</label>
-            <input type="checkbox" name="service" id="service3" value="120">
-            <label for="service4">15 Checkpoints Inspection</label>
-            <input type="checkbox" name="service" id="service4" value="1000">
-            <label for="service5">Engine Suspension Inspection</label>
-            <input type="checkbox" name="service" id="service5" value="950">
-            <label for="service6">Car Battery Replacement</label>
-            <input type="checkbox" name="service" id="service6" value="200">
-
-            <br>
-
-            <br>
-
-            <h2>PERSONAL INFORMATIONS</h2>
-            <br>
-
-            <label for="fname">Full Name</label>
-            <input type="text" id="fname" name="fullname" placeholder="Your name..">
-
-            <label for="email">E-mail</label>
-            <input type="text" id="email" name="em" placeholder="Your e-mail..">
-
-            <label for="noPhone">Phone number</label>
-            <input type="text" id="noPhone" name="no_phone" placeholder="Your no phone ..">
-            <label for="contactWay">I wish to be contacted by:</label>
-            <select id="contactWay" name="contact">
-              <option value="Phone">Phone</option>
-              <option value="E-mail">E-mail</option>
-              <option value="Phone and e-mail">Phone or E-mail</option>
-            </select>
-
-            <input type="submit" value="Submit">
-          </form>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <button class="quotation" id="myBtnSedan" onclick="popupSectionSedan()">SEDAN</button>
-    <div id="quotation-popupSedan" class="popup">
-
-      <!-- Modal content -->
-      <div class="popup-content">
-        <span class="close-popup">&times;</span>
-
-
-       
-
-        <h1> PLEASE ENTER YOUR QUOTE REQUESTS:</h1>
-        <br><br>
-        <hr><br>
-        <div>
-          <h2>SELECT THE SERVICE</h2>
-          <br>
-          <form id="quotationForm" onsubmit="service_select(event)">
-            <label for="service1">All About Tyre</label>
-            <input type="checkbox" name="service" id="service1" value="200">
-            <label for="service2">Aircond Services</label>
-            <input type="checkbox" name="service" id="service2" value="150">
-            <label for="service3">Engine Oil Replacement</label>
-            <input type="checkbox" name="service" id="service3" value="120">
-            <label for="service4">15 Checkpoints Inspection</label>
-            <input type="checkbox" name="service" id="service4" value="1000">
-            <label for="service5">Engine Suspension Inspection</label>
-            <input type="checkbox" name="service" id="service5" value="950">
-            <label for="service6">Car Battery Replacement</label>
-            <input type="checkbox" name="service" id="service6" value="200">
+     <div id="headerQuote">
+      <h1> PLEASE ENTER YOUR QUOTE REQUESTS:</h1></div>  
+    
+          <div id="midQuote">
+            <h2>SELECT THE SERVICE</h2></div>
+              <div>
+              <label for="carType"><h2>CAR TYPE:</h2></label>
+                <select id="carType" name="carType">
+                  <option  value="suv"><h2>SUV</h2></option>
+                  <option  value="sedan"><h2>Sedan</h2></option>
+                  <option  value="mpv"><h2>MPV</h2></option>
+                </select>
+              </div>
+            
+<div id="suvSection" style="display: none;">
+  <br><br><br>
+  <h3>SUV Section</h3>
+ 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<form id="serviceForm">
+<div class="splitContent">
+  <div class="content left-content">
+    <label for="service1">All About Tyre</label>
+    <label for="service2">Aircond Services</label>
+    <label for="service3">Engine Oil Replacement</label>
+    <label for="service4">15 Checkpoints Inspection</label>
+    <label for="service5">Engine Suspension Inspection</label>
+    <label for="service6">Car Battery Replacement</label>
+  </div>
+  <div class="left-content">
+    <input type="checkbox" name="service1" id="service1" value="200">
+    <input type="checkbox" name="service" id="service2" value="150">
+    <input type="checkbox" name="service" id="service3" value="120">
+    <input type="checkbox" name="service" id="service4" value="1000">
+    <input type="checkbox" name="service" id="service5" value="950">
+    <input type="checkbox" name="service" id="service6" value="200">
 
             <br>
 
@@ -1023,104 +977,153 @@
             <label for="email">E-mail</label>
             <input type="text" id="email" name="em" placeholder="Your e-mail..">
 
-            <label for="noPhone">Phone number</label>
-            <input type="text" id="noPhone" name="no_phone" placeholder="Your no phone ..">
-            <label for="contactWay">I wish to be contacted by:</label>
-            <select id="contactWay" name="contact">
-              <option value="Phone">Phone</option>
-              <option value="E-mail">E-mail</option>
-              <option value="Phone and e-mail">Phone or E-mail</option>
-            </select>
+  <label for="noPhone">Phone number</label>
+  <input type="text" id="noPhone" name="no_phone" placeholder="Your no phone ..">
+</div>
+ 
+    <button id="summaryButton">Open Summary</button>
 
-            <input type="submit" value="Submit">
-          </form>
-        </div>
-
-      </div>
-
-    </div>
-
-    <button class="quotation" id="myBtn" onclick="popupSection()">MPV</button>
-    <div id="quotation-popup" class="popup">
-
-      <!-- Modal content -->
-      <div class="popup-content">
-        <span class="close-popup">&times;</span>
-
-
-       
-
-        <h1> PLEASE ENTER YOUR QUOTE REQUESTS:</h1>
-        <br><br>
-        <hr><br>
-        <div>
-          <h2>SELECT THE SERVICE</h2>
-          <br>
-          <form id="quotationForm" onsubmit="service_select(event)">
-            <label for="service1">All About Tyre</label>
-            <input type="checkbox" name="service" id="service1" value="200">
-            <label for="service2">Aircond Services</label>
-            <input type="checkbox" name="service" id="service2" value="150">
-            <label for="service3">Engine Oil Replacement</label>
-            <input type="checkbox" name="service" id="service3" value="120">
-            <label for="service4">15 Checkpoints Inspection</label>
-            <input type="checkbox" name="service" id="service4" value="1000">
-            <label for="service5">Engine Suspension Inspection</label>
-            <input type="checkbox" name="service" id="service5" value="950">
-            <label for="service6">Car Battery Replacement</label>
-            <input type="checkbox" name="service" id="service6" value="200">
-
-            <br>
-
-            <br>
-
-            <h2>PERSONAL INFORMATIONS</h2>
-            <br>
-
-            <label for="fname">Full Name</label>
-            <input type="text" id="fname" name="fullname" placeholder="Your name..">
-
-            <label for="email">E-mail</label>
-            <input type="text" id="email" name="em" placeholder="Your e-mail..">
-
-            <label for="noPhone">Phone number</label>
-            <input type="text" id="noPhone" name="no_phone" placeholder="Your no phone ..">
-            <label for="contactWay">I wish to be contacted by:</label>
-            <select id="contactWay" name="contact">
-              <option value="Phone">Phone</option>
-              <option value="E-mail">E-mail</option>
-              <option value="Phone and e-mail">Phone or E-mail</option>
-            </select>
-
-            <input type="submit" value="Submit">
-          </form>
-        </div>
+</form>
+</div>
 
       </div>
 
     </div>
 
     
+  </div>
+<div class="nilah">
+  <h2>PERSONAL INFORMATIONS</h2>
+  <br>
+
+  <label for="fnameS">Full Name</label>
+  <input type="text" id="fnameS" name="fullname" placeholder="Your name..">
+
+
+  <label for="noPhoneS">Phone number</label>
+  <input type="text" id="noPhoneS" name="no_phone" placeholder="Your no phone ..">
+</div>
+ 
+    <button id="summaryButtonS">Open Summary</button>
+
+</form>
+</div>
 
 
 
+      </div><div id="mpvSection" style="display: none;">
+        <br><br><br>
+        <h3>MPV Section</h3>
+       
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <form id="serviceFormM">
+      <div class="splitContent">
+        <div class="content left-content">
+          <label for="service1m">All About Tyre</label>
+          <label for="service2m">Aircond Services</label>
+          <label for="service3m">Engine Oil Replacement</label>
+          <label for="service4m">15 Checkpoints Inspection</label>
+          <label for="service5m">Engine Suspension Inspection</label>
+          <label for="service6m">Car Battery Replacement</label>
+        </div>
+        <div class="left-content">
+          <input type="checkbox" name="service1" id="service1m" value="200">
+          <input type="checkbox" name="service" id="service2m" value="150">
+          <input type="checkbox" name="service" id="service3m" value="120">
+          <input type="checkbox" name="service" id="service4m" value="1000">
+          <input type="checkbox" name="service" id="service5m" value="950">
+          <input type="checkbox" name="service" id="service6m" value="200">
+      
+          
+        </div>
+      <div class="nilah">
+        <h2>PERSONAL INFORMATIONS</h2>
+        <br>
+      
+        <label for="fnameM">Full Name</label>
+        <input type="text" id="fnameM" name="fullname" placeholder="Your name..">
+      
+        <label for="emailM">E-mail</label>
+        <input type="text" id="emailM" name="em" placeholder="Your e-mail..">
+      
+        <label for="noPhoneM">Phone number</label>
+        <input type="text" id="noPhoneM" name="no_phone" placeholder="Your no phone ..">
+      </div>
+       
+          <button id="summaryButtonM">Open Summary</button>
+      
+      </form>
+      </div>
+    </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+    
 <script>
-
-
 function openPopup(popupId) {
   document.getElementById(popupId).style.display = 'flex';
 }
 
-function closePopup(popupId) {
-  document.getElementById(popupId).style.display = 'none';
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+
+// Get the form, checkboxes, and summary button
+const form = document.getElementById('serviceForm');
+const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+const summaryButton = document.getElementById('summaryButton');
+
+// Listen for click event on the summary button
+summaryButton.addEventListener('click', openTabWithSummary);
+
+// Function to open a new tab with the summary
+function openTabWithSummary(event) {
+  event.preventDefault();
+
+  // Get all the checked checkboxes
+  const checkedCheckboxes = Array.from(form.querySelectorAll('input[type="checkbox"]:checked'));
+
+  // Calculate the total cost
+  const totalCost = checkedCheckboxes.reduce((total, checkbox) => {
+    return total + parseInt(checkbox.value);
+  }, 0);
+
+  // Get the input values from the form
+  const name = document.getElementById('fname').value;
+  const email = document.getElementById('email').value;
+  const phoneNumber = document.getElementById('noPhone').value;
+
+  // Create an array of selected services
+  const selectedServices = checkedCheckboxes.map((checkbox) => {
+    const label = document.querySelector(`label[for="${checkbox.id}"]`).textContent;
+    return `${label} - RM${checkbox.value}`;
+  });
+
+  // Open a new tab
+  const newTab = window.open();
+
+  // Write the content to the new tab
+  newTab.document.write(`
+    <h1>Service Summary</h1>
+    <h2>Personal Information:</h2>
+    <p>Name: ${name}</p>
+    <p>Email: ${email}</p>
+    <p>Phone Number: ${phoneNumber}</p>
+    <h2>Selected Services:</h2>
+    <ul>${selectedServices.map((service) => `<li>${service}</li>`).join('')}</ul>
+    <p>Total Cost: RM${totalCost}</p>
+  `);
 }
 
-window.onclick = function(event) {
-  var popup = document.getElementById(event.target.id);
-  if (popup && popup.classList.contains('popup1')) {
-    popup.style.display = 'none';
-  }
-};
 
 </script>
 
