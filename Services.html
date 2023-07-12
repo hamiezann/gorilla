@@ -992,12 +992,61 @@ function closePopup(popupId) {
   document.getElementById(popupId).style.display = 'none';
 }
 
+
 window.onclick = function(event) {
   var popup = document.getElementById(event.target.id);
   if (popup && popup.classList.contains('popup1')) {
     popup.style.display = 'none';
   }
 };
+
+// Get the form, checkboxes, and summary button
+const form = document.getElementById('serviceForm');
+const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+const summaryButton = document.getElementById('summaryButton');
+
+// Listen for click event on the summary button
+summaryButton.addEventListener('click', openTabWithSummary);
+
+// Function to open a new tab with the summary
+function openTabWithSummary(event) {
+  event.preventDefault();
+
+  // Get all the checked checkboxes
+  const checkedCheckboxes = Array.from(form.querySelectorAll('input[type="checkbox"]:checked'));
+
+  // Calculate the total cost
+  const totalCost = checkedCheckboxes.reduce((total, checkbox) => {
+    return total + parseInt(checkbox.value);
+  }, 0);
+
+  // Get the input values from the form
+  const name = document.getElementById('fname').value;
+  const email = document.getElementById('email').value;
+  const phoneNumber = document.getElementById('noPhone').value;
+
+  // Create an array of selected services
+  const selectedServices = checkedCheckboxes.map((checkbox) => {
+    const label = document.querySelector(`label[for="${checkbox.id}"]`).textContent;
+    return `${label} - RM${checkbox.value}`;
+  });
+
+  // Open a new tab
+  const newTab = window.open();
+
+  // Write the content to the new tab
+  newTab.document.write(`
+    <h1>Service Summary</h1>
+    <h2>Personal Information:</h2>
+    <p>Name: ${name}</p>
+    <p>Email: ${email}</p>
+    <p>Phone Number: ${phoneNumber}</p>
+    <h2>Selected Services:</h2>
+    <ul>${selectedServices.map((service) => `<li>${service}</li>`).join('')}</ul>
+    <p>Total Cost: RM${totalCost}</p>
+  `);
+}
+
 
 </script>
 
