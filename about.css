@@ -1,0 +1,452 @@
+* {
+    /* font-family: 'Kumbh Sans', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Proza Libre', sans-serif; */
+    margin:0;
+    padding: 0; 
+
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #D6EAF8 ;
+    overflow: auto;
+    
+}
+ .navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#11009E;
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+
+  }
+  .logo {
+
+    float: left;
+    padding-left: 5%;
+    margin-right: 450px;
+    margin-left: 50px;
+    display: flex;
+  }
+  .logo img {
+    max-height: 175px;
+    width: auto;
+  }
+  
+ .navbar a  {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px ;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #0079FF;
+    color :black;
+    border-radius: 6px;
+  }
+
+  /* color changer */
+
+  /* .container {
+    border: 90px solid #333;
+    } */
+    .color {
+    display: table-cell;
+    width: 150px;
+    height: 50px;
+    margin: 0 1px;
+    cursor: pointer;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    
+    }
+    .clr1 {
+    background-color: #FF0060 ;
+    }
+    .clr2 {
+    background-color: #F6FA70;
+    }
+    .clr3 {
+    background-color: #00DFA2;
+    }
+    .clr4 {
+    background-color: #0F68DB;
+    }
+
+    /* dropdown color changer */
+    .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+      
+      .dropdown .dropbtn {
+        cursor: pointer;
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: #FF0060 ;
+        font-family: inherit;
+        border-radius: 5px;
+        margin-left: 20px;
+      }
+      
+      .dropdown:hover .dropbtn, .dropbtn:focus {
+        background-color: #F6FA70;
+        color: #333;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 190px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      
+      .show {
+        display: block;
+      }
+
+      .main-topic {
+        background-image: url('kereta.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+        text-align: center;
+      }
+      
+      .main-topic > h1 {
+        color: white;
+        font-size: 40px;
+        margin: 0 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .jumbotron {
+        position: relative;
+        background: url('kereta.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .jumbotron:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Faded background overlay */
+    }
+
+    .jumbotron .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .jumbotron h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron p {
+        font-style: italic;
+        margin-bottom: 10px;
+        
+    }
+
+    .jumbotron a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        margin-top: 25px;
+    }
+
+    .jumbotron a:hover {
+        background-color: #0056b3;
+    }
+
+    .container {
+        max-width: 960px;
+        margin: 70px auto;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .container h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    body > .container > p {
+        font-style: italic;
+        color: #6c757d;
+        margin-bottom: 20px;
+        font-weight: 900px;
+
+    }
+
+    .container strong {
+        font-weight: bold;
+        color: #000;
+    }
+
+    body > .container > .row > ul {
+        list-style: none; /* Remove default bullet points */
+        padding-left: 0; /* Remove default indentation */
+      }
+    
+      body > .container > .row > ul > li {
+        position: relative; /* Required for icon positioning */
+        padding-left: 30px; /* Create space for the icon */
+        margin-bottom: 10px; /* Adjust as needed */
+      }
+    
+      body > .container > .row > ul > li::before {
+        content: ""; /* Required for pseudo-element */
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    
+      body > .container > .row > ul > li ion-icon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        
+      }
+
+
+      /* baru */
+
+      .jumbotron1 {
+        position: relative;
+        background: url('ikang.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        color: wheat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .jumbotron1:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Faded background overlay */
+    }
+
+    .jumbotron1 .container1 {
+        position: relative;
+        z-index: 1;
+    }
+
+    .jumbotron1 h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron1 p {
+        font-style: italic;
+        margin-bottom: 10px;
+        
+    }
+
+    .jumbotron1 a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        margin-top: 25px;
+    }
+
+    .jumbotron1 a:hover {
+        background-color: #0056b3;
+    }
+
+    .container1 {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .container1 h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    body > .container1 > p {
+        font-style: italic;
+        color: #6c757d;
+        margin-bottom: 20px;
+        font-weight: 900px;
+
+    }
+
+    .container1 strong {
+        font-weight: bold;
+        color: #000;
+    }
+
+    /* slider */
+
+    /* Panels. */
+.splitview {
+    position: relative;
+    width: 100%;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+.panel {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+    .panel .content {
+        position: absolute;
+        width: 100vw;
+        min-height: 45vw;
+        color: #FFF;
+    }
+
+    .panel .description {
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .panel img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 35%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+.bottom {
+    background-color: rgb(44, 44, 44);
+    z-index: 1;
+}
+
+    .bottom .description {
+        right: 5%;
+    }
+
+.top {
+    background-color: rgb(77, 69, 173);
+    z-index: 2;
+    width: 50vw;
+
+    /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+}
+
+    .top .description {
+        left: 5%;
+    }
+
+/* Handle. */
+.handle {
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-color: rgb(253, 171, 0);
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+}
+
+/* Skewed. */
+.skewed .handle {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    transform-origin: top;
+}
+
+.skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .top .content {
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
+
+/* Responsive. */
+@media (max-width: 900px) {
+    body {
+        font-size: 75%;
+    }
+}
+
+      
+
+      
+      
