@@ -57,64 +57,74 @@ span.onclick = function() {
 }
 
 
-function service_select(event){
+function service_select(event) {
   event.preventDefault();
-    const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'));
-    const services = checkboxes.map(checkbox => ({
-      value: parseInt(checkbox.value),
-      label: checkbox.previousElementSibling.textContent
-    }));
-      
-    const fullname = document.getElementById('fname').value;
-    const email = document.getElementById('email').value;
-    const phoneNumber = document.getElementById('noPhone').value;
-    const contactMethod = document.getElementById('contactWay').value;
+  // Get the form and checkboxes
+const form = document.getElementById('serviceForm');
+const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+const summaryButton = document.getElementById('summaryButton');
+
+// Listen for click event on the summary button
+summaryButton.addEventListener('click', openTabWithSummary);
+
+// Function to open a new tab with the summary
+function openTabWithSummary() {
+  event.preventDefault();
+  // Get all the checked checkboxes
+  const checkedCheckboxes = Array.from(form.querySelectorAll('input[type="checkbox"]:checked'));
+
+  // Calculate the total cost
+  const totalCost = checkedCheckboxes.reduce((total, checkbox) => {
+    return total + parseInt(checkbox.value);
+  }, 0);
+
+  // Create an array of selected services
+  const selectedServices = checkedCheckboxes.map((checkbox) => {
+    const label = document.querySelector(`label[for="${checkbox.id}"]`).textContent;
+    return `${label} - RM${checkbox.value}`;
+  });
 
 
-    const sum = services.reduce((total, service) => total + service.value, 0);
+  const fullname = document.getElementById('fname').value;
+  const email = document.getElementById('email').value;
+  const phoneNumber = document.getElementById('noPhone').value;
+  const contactMethod = document.getElementById('contactWay').value;
 
+  const imageUrl = "testbaru.svg";
 
-    const imageUrl = "testbaru.svg";
-
-    
-    const checkedItems = Array.from(checkboxes).map(checkbox => {
-      return {
-        label: document.querySelector(`label[for="${checkbox.id}"]`).textContent,
-        value: checkbox.value
-      };
-    });
-
-    // Display the checked checkboxes
-    const content = `<h2>Checked Services:</h2><hr><ul>${checkedItems.map(item => `<li>${item.label} - <p>RM${item.value}</p></li>`).join('')}</ul>`;
-    const newTab = window.open();
+  // Create the content for the new tab
+  const content = `<h2>Checked Services:</h2><hr><ul>${selectedServices.map((service) => `<li>${service}</li>`).join('')}</ul>`;
+  const newTab = window.open();
   newTab.document.write(`
-  
-  <img src="${imageUrl}" alt="Predefined Image" width="300" height="200">
-  <h1>Service Quotation</h1>
-<p> ~ Please be mindful the price displayed here is just a cost overhead for the service and there may be changes to the price based on the real condition of customer cars and suggestion of our experts. ~</p>
-                          <hr>
-                          <hr>
-                  
-                          <h2>Customer Details:</h2>
-                          <hr>
-                          <p>Name:${fullname}</p>
-                      
-                          <p>E-mail:${email}</p>
-                          
-                          <p>Phone number:${phoneNumber}</p>
-                          
-                          <p>Contact Method:${contactMethod}</p>
-                          <p>Service Charge: RM${sum}</p>
-                          <br>
-                          <hr>
-                          <p>${content}</p>
-                          <br>
-                          
-                          <br><br><br><br>
-                          `);
+    <h1>Service Summary</h1>
+    <p>Total Cost: RM${totalCost}</p>
 
-                          
-  }
+    <img src="${imageUrl}" alt="Predefined Image" width="300" height="200">
+    <h1>Service Quotation</h1>
+    <p> ~ Please be mindful the price displayed here is just a cost overhead for the service and there may be changes to the price based on the real condition of customer cars and suggestion of our experts. ~</p>
+    <hr>
+    <hr>
+    <h2>Customer Details:</h2>
+    <hr>
+    <p>Name: ${fullname}</p>
+    <p>E-mail: ${email}</p>
+    <p>Phone number: ${phoneNumber}</p>
+    <p>Contact Method: ${contactMethod}</p>
+    <p>Service Charge: RM${sum}</p>
+    <br>
+    <hr>
+    <p>${content}</p>
+    <br>
+    <br><br><br><br>
+    ${content}
+  `);
+}
+ 
+  
+}
+
+
+
 
 
 
