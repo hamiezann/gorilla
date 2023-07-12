@@ -1099,143 +1099,53 @@ function closePopup(popupId) {
   document.getElementById(popupId).style.display = 'none';
 }
 
-<<<<<<< HEAD
-// Get the select element
-const carTypeSelect = document.getElementById('carType');
-        // const showHiddenSectionBtn = document.getElementById('showHiddenSectionBtn');
-
-        // Add an event listener for the change event
-        carTypeSelect.addEventListener('change', function() {
-          // Get the selected option value
-          const selectedOption = this.value;
-
-          // Show or hide the corresponding section based on the selected option
-          const suvSection = document.getElementById('suvSection');
-          const sedanSection = document.getElementById('sedanSection');
-          const mpvSection = document.getElementById('mpvSection');
-
-          if (selectedOption === 'suv') {
-            suvSection.style.display = 'block';
-            sedanSection.style.display = 'none';
-            mpvSection.style.display = 'none';
-          } else if (selectedOption === 'sedan') {
-            suvSection.style.display = 'none';
-            sedanSection.style.display = 'block';
-            mpvSection.style.display = 'none';
-          } else if (selectedOption === 'mpv') {
-            suvSection.style.display = 'none';
-            sedanSection.style.display = 'none';
-            mpvSection.style.display = 'block';
-          } else {
-            suvSection.style.display = 'none';
-            sedanSection.style.display = 'none';
-            mpvSection.style.display = 'none';
-          }
-        });
-
 // Get the form, checkboxes, and summary button
-const formS = document.getElementById('serviceFormSedan');
-const checkboxesS = formS.querySelectorAll('input[type="checkbox"]');
-const summaryButtonS = document.getElementById('summaryButtonS');
+const form = document.getElementById('serviceForm');
+const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+const summaryButton = document.getElementById('summaryButton');
 
 // Listen for click event on the summary button
-summaryButtonS.addEventListener('click', openTabWithSummaryS);
+summaryButton.addEventListener('click', openTabWithSummary);
 
 // Function to open a new tab with the summary
-function openTabWithSummaryS(event) {
+function openTabWithSummary(event) {
   event.preventDefault();
 
   // Get all the checked checkboxes
-  const checkedCheckboxesS = Array.from(formS.querySelectorAll('input[type="checkbox"]:checked'));
+  const checkedCheckboxes = Array.from(form.querySelectorAll('input[type="checkbox"]:checked'));
 
   // Calculate the total cost
-  const totalCostS = checkedCheckboxesS.reduce((total, checkbox) => {
+  const totalCost = checkedCheckboxes.reduce((total, checkbox) => {
     return total + parseInt(checkbox.value);
   }, 0);
 
   // Get the input values from the form
-  const nameS = document.getElementById('fnameS').value;
-  const emailS = document.getElementById('emailS').value;
-  const phoneNumberS = document.getElementById('noPhoneS').value;
+  const name = document.getElementById('fname').value;
+  const email = document.getElementById('email').value;
+  const phoneNumber = document.getElementById('noPhone').value;
 
   // Create an array of selected services
-  const selectedServicesS = checkedCheckboxesS.map((checkbox) => {
-    const labelS = document.querySelector(`label[for="${checkbox.id}"]`).textContent;
-    return `${labelS} - RM${checkbox.value}`;
+  const selectedServices = checkedCheckboxes.map((checkbox) => {
+    const label = document.querySelector(`label[for="${checkbox.id}"]`).textContent;
+    return `${label} - RM${checkbox.value}`;
   });
 
   // Open a new tab
-  const newTabS = window.open();
+  const newTab = window.open();
 
   // Write the content to the new tab
-  newTabS.document.write(`
+  newTab.document.write(`
     <h1>Service Summary</h1>
     <h2>Personal Information:</h2>
-    <p>Name: ${nameS}</p>
-    <p>Email: ${emailS}</p>
-    <p>Phone Number: ${phoneNumberS}</p>
+    <p>Name: ${name}</p>
+    <p>Email: ${email}</p>
+    <p>Phone Number: ${phoneNumber}</p>
     <h2>Selected Services:</h2>
-    <ul>${selectedServicesS.map((service) => `<li>${service}</li>`).join('')}</ul>
-    <p>Total Cost: RM${totalCostS}</p>
+    <ul>${selectedServices.map((service) => `<li>${service}</li>`).join('')}</ul>
+    <p>Total Cost: RM${totalCost}</p>
   `);
 }
 
-
-// Get the form, checkboxes, and summary button
-const formM = document.getElementById('serviceFormM');
-const checkboxesM = formM.querySelectorAll('input[type="checkbox"]');
-const summaryButtonM = document.getElementById('summaryButtonM');
-
-// Listen for click event on the summary button
-summaryButtonM.addEventListener('click', openTabWithSummaryM);
-
-// Function to open a new tab with the summary
-function openTabWithSummaryM(event) {
-  event.preventDefault();
-
-  // Get all the checked checkboxes
-  const checkedCheckboxesM = Array.from(formM.querySelectorAll('input[type="checkbox"]:checked'));
-
-  // Calculate the total cost
-  const totalCostM = checkedCheckboxesM.reduce((total, checkbox) => {
-    return total + parseInt(checkbox.value);
-  }, 0);
-
-  // Get the input values from the form
-  const nameM = document.getElementById('fnameM').value;
-  const emailM = document.getElementById('emailM').value;
-  const phoneNumberM = document.getElementById('noPhoneM').value;
-
-  // Create an array of selected services
-  const selectedServicesM = checkedCheckboxesM.map((checkbox) => {
-    const labelM = document.querySelector(`label[for="${checkbox.id}"]`).textContent;
-    return `${labelM} - RM${checkbox.value}`;
-  });
-
-  // Open a new tab
-  const newTabM = window.open();
-
-  // Write the content to the new tab
-  newTabM.document.write(`
-    <h1>Service Summary</h1>
-    <h2>Personal Information:</h2>
-    <p>Name: ${nameM}</p>
-    <p>Email: ${emailM}</p>
-    <p>Phone Number: ${phoneNumberM}</p>
-    <h2>Selected Services:</h2>
-    <ul>${selectedServicesM.map((service) => `<li>${service}</li>`).join('')}</ul>
-    <p>Total Cost: RM${totalCostM}</p>
-  `);
-}
-
-=======
-window.onclick = function(event) {
-  var popup = document.getElementById(event.target.id);
-  if (popup && popup.classList.contains('popup1')) {
-    popup.style.display = 'none';
-  }
-};
->>>>>>> 8915139d63cfc12aef4839dcd494eba6beee33ff
 
 </script>
 
