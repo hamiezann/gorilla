@@ -7,34 +7,153 @@
   <script src="gorilla.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GORILLA</title>
+  <link rel="icon" type="image/x-icon" href="logobaru.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Montserrat&family=Proza+Libre&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
+  <link rel="manifest" href="manifest.json">
+    <script>
+        //if browser support service worker
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw.js');
+        };
+      </script>
+
+
+<style>
+  /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+  body {
+    background-color: #fff;
+    color: #1c1818;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 4%;
+    justify-content: center;
+  }
+
+  [type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .dark-light + label {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    z-index: 20000;
+    display: block;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 200ms linear;
+    box-shadow: 0 0 25px rgba(255, 235, 167, 0.45);
+  }
+
+  .dark-light:checked + label {
+    transform: rotate(360deg);
+  }
+
+  .dark-light + label::after,
+  .dark-light:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    overflow: hidden;
+    z-index: 2;
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #102770;
+    background-image: url('https://assets.codepen.io/1462889/moon.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 200ms linear;
+    opacity: 0;
+  }
+
+  .dark-light:checked + label::after {
+    opacity: 1;
+  }
+
+  .dark-light + label::before,
+  .dark-light:checked + label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 1;
+    display: block;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #48dbfb;
+    background-image: url('https://assets.codepen.io/1462889/sun.svg');
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 200ms linear;
+  }
+
+  .dark-light:checked + label::before {
+    background-color: #000;
+  }
+
+  .light-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00DFA2 !important;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms linear;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .dark-light:checked ~ .light-back {
+    opacity: 1;
+  } */
+</style>
 </head>
 
 <body>
 
   <!-- navbar -->
   <div class="navbar">
-    <div class="logo"><img  src="testbaru.svg"></div>
-
-    <a href="aboutUs.html">About Us</a>
-      <a href="Services.html">Services</a>
-      <a href="contact.html">Contact Us</a>
-      <div class="dropdown">
-        <button class="dropbtn" onclick="myFunction()">Change Color <i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content" id="myDropdown">
-          <a href="#"><span  onclick="color(this)" class='color clr1'></span>Color 1</a>
-          <a href="#"><span  onclick="color(this)" class='color clr2'></span>Color 2</a>
-          <a href="#"><span onclick="color(this)" class='color clr3'></span>Color 3</a>
-          <a href="#"><span onClick="color(this)" class='color clr4'></span>Color 4</a>
-
-        </div>
-      </div>
+    <div class="logo">
+      <img src="testbaru.svg">
+    </div>
+    <ul>
+      <li><a href="aboutUs.html">About Us</a></li>
+      <li><a href="Services.html">Services</a></li>
+      <li class="contact-button"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="dark-light-toggle">
+      <input class="dark-light" type="checkbox" id="dark-light" name="dark-light"/>
+      <label for="dark-light"></label>
+      <div class="light-back"></div>
+    </div>
   </div>
+  
+  
+  
+  
+  
+  
   <br>
   <!-- Services -->
   <div class="services_head">
@@ -935,12 +1054,12 @@
         <div>
 
           <h2>SELECT THE CAR TYPE</h2>
-    <br>
-    <select id="carType" name="carType">
-      <option value="MPV">MPV</option>
-      <option value="Sedan">Sedan</option>
-      <option value="SUV">SUV</option>
-    </select>
+          <br>
+          <select id="carType" name="carType">
+          <option value="MPV">MPV</option>
+          <option value="Sedan">Sedan</option>
+          <option value="SUV">SUV</option>
+          </select>
 
 
           
@@ -948,18 +1067,18 @@
           <h2>SELECT THE SERVICE</h2>
           <br>
           <form id="serviceForm" onsubmit="service_select(event)">
-            <label for="service1">All About Tyre</label>
-            <input type="checkbox" name="service" id="service1" value="200">
-            <label for="service2">Aircond Services</label>
-            <input type="checkbox" name="service" id="service2" value="150">
-            <label for="service3">Engine Oil Replacement</label>
-            <input type="checkbox" name="service" id="service3" value="120">
-            <label for="service4">15 Checkpoints Inspection</label>
-            <input type="checkbox" name="service" id="service4" value="1000">
-            <label for="service5">Engine Suspension Inspection</label>
-            <input type="checkbox" name="service" id="service5" value="950">
-            <label for="service6">Car Battery Replacement</label>
-            <input type="checkbox" name="service" id="service6" value="200">
+            <label for="service1">All About Tyre
+            <input type="checkbox" name="service" id="service1" value="200"></label>
+            <label for="service2">Aircond Services
+            <input type="checkbox" name="service" id="service2" value="150"></label>
+            <label for="service3">Engine Oil Replacement
+            <input type="checkbox" name="service" id="service3" value="120"></label>
+            <label for="service4">15 Checkpoints Inspection
+            <input type="checkbox" name="service" id="service4" value="1000"></label>
+            <label for="service5">Engine Suspension Inspection
+            <input type="checkbox" name="service" id="service5" value="950"></label>
+            <label for="service6">Car Battery Replacement
+            <input type="checkbox" name="service" id="service6" value="200"></label>
 
             <br>
 
@@ -1045,7 +1164,24 @@ window.onclick = function(event) {
 }
 </script>
 
+<script>// Toggle the light/dark mode
+  // Toggle the light/dark mode
+function toggleDarkLightMode() {
+  const darkLightCheckbox = document.getElementById('dark-light');
+  const lightBack = document.querySelector('.light-back');
+  
+  if (darkLightCheckbox.checked) {
+    lightBack.style.opacity = '1';
+  } else {
+    lightBack.style.opacity = '0';
+  }
+}
 
+// Listen for the change event on the checkbox
+const darkLightCheckbox = document.getElementById('dark-light');
+darkLightCheckbox.addEventListener('change', toggleDarkLightMode);
+
+  </script>
 
 </body>
 

@@ -66,6 +66,22 @@ const summaryButton = document.getElementById('summaryButton');
 const carType = document.getElementById('carType').value;
 const discountCode = document.getElementById('discountCode').value; // Get the discount code input
 
+// Validate the required fields
+const fullname = document.getElementById('fname').value;
+const email = document.getElementById('email').value;
+const phoneNumber = document.getElementById('noPhone').value;
+const contactMethod = document.getElementById('contactWay').value;
+
+if (
+  fullname.trim() === '' ||
+  email.trim() === '' ||
+  phoneNumber.trim() === '' ||
+  contactMethod.trim() === ''
+) {
+  alert('Please fill in all required fields.');
+  return; // Stop the form submission
+}
+
 // Listen for click event on the summary button
 summaryButton.addEventListener('click', openTabWithSummary);
 

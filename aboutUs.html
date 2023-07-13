@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GORILLA</title>
     <link rel="icon" type="image/x-icon" href="logobaru.png">
+
+    <link rel="manifest" href="manifest.json">
+    <script>
+        //if browser support service worker
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw.js');
+        };
+      </script>
     
      <!-- Image -->
      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,23 +28,20 @@
 </head>
 <body>
   <div class="navbar">
-    <div class="logo"><img src="testbaru.svg"></div>
-   
-    <a href="aboutUs.html">About Us</a>
-    <a href="Services.html">Services</a>
-    <a href="contact.html">Contact Us</a>
-    <div class="dropdown">
-    <button class="dropbtn" onclick="myFunction()">Change Color <i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-content" id="myDropdown">
-        <a href="#"><span id="1" onclick="color(this)" class="color clr1"></span>Color 1</a>
-        <a href="#"><span id="2" onclick="color(this)" class="color clr2"></span>Color 2</a>
-        <a href="#"><span onclick="color(this)" class="color clr3"></span>Color 3</a>
-        <a href="#"><span onclick="color(this)" class="color clr4"></span>Color 4</a>
-        
-      </div>
+    <div class="logo">
+      <img src="testbaru.svg">
     </div>
-</div>
-      
+    <ul>
+      <li><a href="aboutUs.html">About Us</a></li>
+      <li><a href="Services.html">Services</a></li>
+      <li class="contact-button"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="dark-light-toggle">
+      <input class="dark-light" type="checkbox" id="dark-light" name="dark-light"/>
+      <label for="dark-light"></label>
+      <div class="light-back"></div>
+    </div>
+  </div>
       
 
 
@@ -111,9 +116,9 @@
         <img src="hamiezan1.png" alt="Jane" style="width:100%">
         <div class="container2">
           
-          <p class="title">Hamiezan</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>example@example.com</p>
+          <p class="title">MUHAMMAD HAMIEZAN BIN ABD GHAFAR</p>
+          <p>2021839822</p>
+          
           
         </div>
       </div>
@@ -125,9 +130,9 @@
         <img src="haziq3.png" alt="Mike" style="width:100%">
         <div class="container2">
           
-          <p class="title">Haziq</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>example@example.com</p>
+          <p class="title">MUHAMAD HAZIQ AIMAN BIN MOHAMAD FAUZI</p>
+          <p>2021840036</p>
+          
           
         </div>
       </div>
@@ -139,9 +144,9 @@
         <img src="salehuddin4.png" alt="John" style="width:100%">
         <div class="container2">
           
-          <p class="title">Salehuddin</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>example@example.com</p>
+          <p class="title">MUHAMMAD SALEHUDDIN BIN MAT SUPIAN</p>
+          <p>2021495422</p>
+          
           
         </div>
       </div>
@@ -153,9 +158,9 @@
         <img src="arief5.png" alt="John" style="width:100%">
         <div class="container2">
           
-          <p class="title">Arief</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>example@example.com</p>
+          <p class="title">NURARIEF ILMAN BIN JEFRI</p>
+          <p>2021871644</p>
+          
           
         </div>
       </div>
@@ -167,9 +172,9 @@
         <img src="farhan2.png" alt="John" style="width:100%">
         <div class="container2">
           
-          <p class="title">Farhan</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>example@example.com</p>
+          <p class="title">MUHAMMAD FARHAN BIN AHMAD</p>
+          <p>2021100643</p>
+          
           
         </div>
       </div>
